@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Las calles hablan</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+<!-- PORTADA -->
+  <!-- BOTONERA FIJA -->
+  <div class="top-navbar">
+    <div class="btn-group">
+      <button onclick="scrollToSection('portada')">
+        <img src="assets/home.png" alt="Inicio" class="icon-home" />
+      </button>
+      <button onclick="scrollToSection('historias')">HISTORIAS</button>
+      <button onclick="scrollToSection('sinfiltro')">SIN FILTRO</button>
+      <button onclick="scrollToSection('mapa')">MAPA SONORO</button>
+      <button onclick="scrollToSection('voz')">VOZ EN FRECUENCIA</button>
+      <button onclick="scrollToSection('blog')"><a href="https://www.blogger.com/blog/posts/8457330611991095879" class="btn-link-white">BLOG</a></button>
+      <button onclick="scrollToSection('retanos')">COMPARTE CON NOSOTROS</button>
+    </div>
+  </div>
+
+  <!-- PORTADA -->
+  <section id="portada" class="section portada">
+    <video autoplay muted loop class="background-video">
+      <source src="assets/INTRO LAS CALLES HABLAN.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    <div class="content-wrap">
+      <!-- Puedes quitar la botonera de aquí -->
+    </div>
+  </section>
+
+  <!-- PREGUNTA -->
+  <section id="pregunta" class="section pregunta">
+
+    <div class="content-wrap">
+      <h1 id="h1pregunta">¿Qué nos están diciendo las paredes, las rimas y los pasos de los barrios que pocos miran?</h1>
+
+      <div class="img-container">
+        <div id="img-container_2">
+          <img src="assets/pregunta.png" alt="pregunta" />
+        </div>
+        <div id="txt-container_2">
+          <p>Para 2030, empoderar y promover la inclusión social, económica y política de todas las personas, independientemente de su edad, sexo, discapacidad, raza, etnia, origen, religión o situación económica u otra condición.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- PANTALLA INICIO -->
+<section id="home" class="section section-bg">
+  <video autoplay muted loop class="background-video">
+    <source src="assets/INTRO LAS CALLES HABLAN.mp4" type="video/mp4">
+  </video>
+  <div class="overlay"></div>
+  <div class="content-wrap">
+    <h1>VIDEO INTRODUCTORIO</h1>
+
+    <div class="video-container">
+      <div id="video-container_2">
+        <div class="video-introductorio">
+          <iframe width="100%" height="100%" 
+            src="https://www.youtube.com/embed/i5ozJ6aeDHY?autoplay=1&mute=1&loop=1&playlist=i5ozJ6aeDHY" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- HISTORIAS -->
+  <section id="historias" class="seccion-historias">
+
+  <h2 class="titulo-historias">RAÍCES URBANAS</h2>
+
+  <div class="contenedor-historias">
+
+    <!-- Cuadro de imágenes pequeñas -->
+    <div class="carousel-container-imagenes">
+  <button id="prevBtnImagenes" class="carousel-btn carousel-left" onclick="moveImagenes(-1)">⬅</button>
+
+  <div class="carousel-viewport">
+    <div class="carousel-track-imagenes" id="carouselImagenes">
+      <div onclick="mostrarHistoria('historia-pequeña-1')">
+        <img src="assets/NILO Y AKM.png" alt="Historia 01" />
+      </div>
+      <div onclick="mostrarHistoria('historia-pequeña-2')">
+        <img src="assets/EDWARD.png" alt="Historia 02" />
+      </div>
+      <div onclick="mostrarHistoria('historia-pequeña-3')">
+        <img src="assets/artesano.png" alt="Historia 03" />
+      </div>
+      <div onclick="mostrarHistoria('historia-pequeña-4')">
+        <img src="assets/ANTOP.jpg" alt="Historia 04" />
+      </div>
+    </div>
+  </div>
+
+  <button id="nextBtnImagenes" class="carousel-btn carousel-right" onclick="moveImagenes(1)">➡</button>
+</div>
+  </div>
+
+    <!-- Historia 01 -->
+      <div id="historia-pequeña-1" class="historia-modal">
+        <div class="contenido-historia">
+          <span class="cerrar" onclick="cerrarHistoria('historia-pequeña-1')">&times;</span>
+          <div class="video-hp1">
+            <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/iRLkMYENqFI?si=Me7w1f1SL5c5R7rH"
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+          </div>
+          <h3>Santiago Danilo Alvarado - Nilo</h3>
+          <p>Artista urbano y graffitero autodidacta, participante del festival Lima 28. Conoció el graffiti en el colegio y desde entonces lo usa como vía de expresión personal y colectiva.</p>
+          <h3>Daniel Olortegui - AKM</h3>
+          <p>Pintor abstracto y graffitero independiente, trabajador municipal en Carabayllo. Explora el arte urbano como extensión de su práctica artística, inspirando a su entorno cercano</p>
+        </div>
+      </div>
+    <!-- Historia 02 -->
+      <div id="historia-pequeña-2" class="historia-modal">
+        <div class="contenido-historia">
+          <span class="cerrar" onclick="cerrarHistoria('historia-pequeña-2')">&times;</span>
+          <div class="video-hp1">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0V9hJjd7wAo?si=gFSkVbr6CGxFL_E7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <h3>Edward Briceño - Cacofónico</h3>
+          <p>Periodista y productor audiovisual de la UNMSM, rap</p>
+        </div>
+      </div>
+    <!-- Historia 03 -->
+      <div id="historia-pequeña-3" class="historia-modal">
+        <div class="contenido-historia">
+          <span class="cerrar" onclick="cerrarHistoria('historia-pequeña-3')">&times;</span>
+          <div class="video-hp3">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8oG9bZzJFu4?si=mssca8XE_HDsOViC" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <h3>Andrés Vilca Cabanillas Artezano (apodo)</h3>
+          <p>Organizador de batallas de freestyle en el comedor de San Marcos y estudiante de educación base 21</p>
+        </div>
+      </div>
+    <!-- Historia 04 -->
+      <div id="historia-pequeña-4" class="historia-modal">
+        <div class="contenido-historia">
+          <span class="cerrar" onclick="cerrarHistoria('historia-pequeña-4')">&times;</span>
+          <div class="video-hp4">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/7esH2RcbbyE?si=WdLvEJN-tgXgXdTv" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen></iframe>
+          </div>
+          <h3>Antoni Alejos Milla </h3>
+          <p>Estudiante de la carrera administración en la UNMSM y rapero conocido como Antop</p>
+        </div>
+      </div>
+
+  </section>
+
+
+<section id="sinfiltro" class="seccion-rima">
+  <h2 class="titulo-sinfiltro">
+    Rimar, pintar, gritar sin permiso. La calle no tiene filtro, en cualquier realidad.
+  </h2>
+
+  <div class="carousel-container-sinfiltro">
+    <button class="carousel-sinfiltro-btn sinfiltro-left" onclick="moverCarruselSinfiltro(-1)">⬅</button>
+
+    <div class="carousel-sinfiltro-viewport">
+      <div class="carousel-sinfiltro-track" id="carouselSinfiltro">
+        <!-- Video 1 -->
+        <div class="sinfiltro-slide">
+          <div class="video-hp4">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/vI5QzwOhowo?si=pXj4MNBTJocZ22w6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="caja-rima">
+            <h3 class="subtitulo">VIDEO COMEDOR</h3>
+            <p>Frente al comedor de San Marcos, la palabra se convierte en combate y comunidad.</p>
+          </div>
+        </div>
+        <!-- Video 2 -->
+        <div class="sinfiltro-slide">
+          <video src="assets/VR- PRIMERO.mp4" controls class="sinfiltro-video"></video>
+          <div class="caja-rima">
+            <h3 class="subtitulo">VR</h3>
+            <p>Nilo y AKM llevan sus trazos a otra dimensión: la realidad virtual.</p>
+          </div>
+        </div>
+        <!-- Video 3 -->
+        <div class="sinfiltro-slide">
+          <div class="video-hp4">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/GZFUfeFTVhA?si=PlR5m9c9x24GKCYg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="caja-rima">
+            <h3 class="subtitulo">AKM EN ACCIÓN</h3>
+            <p>Colores que estallan y una idea que toma forma en cada pared.</p>
+          </div>
+        </div>
+        <!-- Video 4 -->
+        <div class="sinfiltro-slide">
+          <div class="video-hp4">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/NumFa5Nw9cU?si=4wCqD_6sxhz3avHx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="caja-rima">
+            <h3 class="subtitulo">NILO EN ACCIÓN</h3>
+            <p>Entre latas y silencios, Nilo convierte el muro en su lienzo. Mira cómo nace una obra callejera que respira estilo y actitud.</p>
+          </div>
+        </div>
+        <!-- Video 5 -->
+        <div class="sinfiltro-slide">
+          <div class="video-hp4">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/otN6itvfX5c?si=anFnWrl3kAgPTUjP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="caja-rima">
+            <h3 class="subtitulo">EL FREE DE  CACO</h3>
+            <p>Palabras que chocan, rimas filosas y ritmo crudo. Cacofónico se suelta con un freestyle que remueve ideas y sacude oídos.</p>
+          </div>
+        </div>
+        <!-- Agrega más bloques si deseas -->
+      </div>
+    </div>
+
+    <button class="carousel-sinfiltro-btn sinfiltro-right" onclick="moverCarruselSinfiltro(1)">➡</button>
+  </div>
+</section>
+
+
+
+
+  <!-- MAPA SONORO -->
+<section id="mapa" class="section">
+
+  <h2 class="titulo-mapa">🗺️ Mapa Sonoro</h2>
+  <!-- MAPA LINK -->
+  <iframe src="https://uploads.knightlab.com/storymapjs/66946dcd2d71a3db92fa613b8db6d727/las-calles-en-lima-hablan/draft.html" frameborder="0" width="100%" height="800"></iframe>
+
+</section>
+
+<!-- VOZ EN FRECUENCIA -->
+<section id="voz" class="seccion-podcast">
+  <div class="podcast-contenido">
+    <div class="podcast-texto">
+      <h2><strong>VOZ EN FRECUENCIA</strong></h2>
+      <p>
+        🎙️ Sumérgete en los sonidos, las voces y las historias que habitan las calles de Lima. En este primer episodio de Voz en Frecuencia, abrimos los micrófonos a una ciudad que se expresa con trazos, versos y beats.
+🧱 Como parte del proyecto transmedia Las calles hablan, este audiopodcast te invita a descubrir el arte urbano limeño como una herramienta viva de inclusión, resistencia y expresión identitaria. Escucharás fragmentos reales de jóvenes graffiteros, raperos y organizadores de batallas que están transformando sus barrios desde el arte.
+🎧 Porque esto no es solo un podcast: es una experiencia sonora para sentir cómo laten los muros, las rimas y las calles.
+🎵 Explora también nuestra playlist curada en Spotify y participa en los retos de freestyle con el hashtag #LasCallesHablan.
+ 🗣️ Aquí, el arte no se calla. Y las calles, tampoco.
+      </p>
+
+      <audio controls>
+        <source src="assets/VOZ EN FRECUENCIA_ EP 1 - Las calles en Lima no callan.wav" type="audio/mpeg">
+        Tu navegador no soporta el audio.
+      </audio>
+      
+    </div>
+
+    <div class="podcast-imagen">
+      <img src="assets/fondo-3.jpeg" alt="..">
+      <div>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1xv5rumq4c0mTVzip2E5ym?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- CONTÁCTANOS -->
+<section id="retanos" class="section retanos">
+  <h2 class="titulo-rimas">#RÉTANOSCONYOURIMA</h2>
+  <p class="descripcion-contacto">
+    Este proyecto sigue creciendo con cada voz que se suma.<br>
+    Si pintas, rimás, grabas o resistes desde tu esquina, queremos escucharte.
+  </p>
+  <p>
+    📩 Escríbenos, comparte tu historia o súmate con una rima.<br>
+    Sube tu video, mural o idea con el hashtag <strong>#RétanosConTuRima</strong>
+    y forma parte de esta red de expresión callejera.
+  </p>
+
+  <div class="cta-subida">
+    <a href="https://forms.gle/sSbmV98bSwcobssPA" target="_blank" class="btn-subir">
+      🚀 Subir archivo y descripción
+    </a>
+  </div>
+</section>
+
+
+  <script>
+  let currentIndex = 0;
+
+  function moveCarousel(direction) {
+    const track = document.getElementById('videoCarousel');
+    const videos = document.querySelectorAll('.carousel-video');
+    const totalVideos = videos.length;
+
+    currentIndex += direction;
+
+    if (currentIndex < 0) currentIndex = 0;
+    if (currentIndex >= totalVideos) currentIndex = totalVideos - 1;
+
+    const offset = videos[0].offsetWidth * currentIndex;
+    track.style.transform = `translateX(-${offset}px)`;
+
+    document.getElementById('prevBtn').style.display = currentIndex > 0 ? 'block' : 'none';
+    document.getElementById('nextBtn').style.display = currentIndex < totalVideos - 1 ? 'block' : 'none';
+  }
+
+  // Esperar a que la página y estilos carguen
+  window.addEventListener('load', () => {
+    setTimeout(() => moveCarousel(0), 100); // Pequeña pausa para asegurar que se calcule bien el ancho
+  });
+</script>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="js/scripts.js"></script>
+<script>
+  function mostrarHistoria(id) {
+    document.getElementById(id).style.display = "flex";
+  }
+
+  function cerrarHistoria(id) {
+    document.getElementById(id).style.display = "none";
+  }
+</script>
+
+
+
+<!-- CAMBIOS CHATBOT HACIA ABAJO-->
+
+      <!-- Botón flotante -->
+    <div class="chatbot-container">
+      <button id="chatbot-toggle"><img src="assets/cursor.png" alt="Chatbot" class="icon-chat"></button>
+
+      <div id="chatbot-window" class="chatbot-window hidden">
+        <div class="chatbot-header">
+          <span>Asistente Virtual</span>
+          <button id="close-chat"><img src="assets/cerrar.png" class="icon-cerrar"></button>
+        </div>
+        <div class="chatbot-body" id="chat-content">
+          <div class="message bot">👋 ¡Hola! ¿En qué puedo ayudarte?</div>
+          <div class="options">
+            <button onclick="selectOption('¿Cómo puedo registrarme?')">¿Cómo puedo registrarme?</button>
+            <button onclick="selectOption('¿Dónde están ubicados?')">¿Dónde están ubicados?</button>
+            <button onclick="selectOption('¿Qué métodos de pago aceptan?')">¿Qué métodos de pago aceptan?</button>
+            <button onclick="selectOption('¿Quieres ver los archivos?')">¿Quieres ver los archivos?</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+<!-- CAMBIOS CHATBOT-->
+
+
+<script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+
+<script>
+document.getElementById('chatbot-toggle').addEventListener('click', function () {
+  document.getElementById('chatbot-window').classList.remove('hidden');
+  document.getElementById('chatbot-toggle').style.display = 'none'; // Oculta el botón
+});
+
+document.getElementById('close-chat').addEventListener('click', function () {
+  document.getElementById('chatbot-window').classList.add('hidden');
+  document.getElementById('chatbot-toggle').style.display = 'block'; // Muestra el botón
+});
+
+
+function selectOption(text) {
+  const chatContent = document.getElementById('chat-content');
+
+  // Agrega la pregunta del usuario
+  const userMsg = document.createElement('div');
+  userMsg.className = 'message user';
+  userMsg.textContent = text;
+  chatContent.appendChild(userMsg);
+
+  // Borra botones anteriores
+  const options = document.querySelector('.options');
+  if (options) options.remove();
+
+  // Genera respuesta
+  const botMsg = document.createElement('div');
+  botMsg.className = 'message bot';
+  botMsg.innerHTML = getResponse(text);
+  chatContent.appendChild(botMsg);
+
+  // Agrega botón de "Volver al menú"
+  const volverBtn = document.createElement('div');
+  volverBtn.innerHTML = `<button onclick="mostrarOpciones()" style="margin-top: 10px; background: #ebfa16; border: none; padding: 8px 12px; cursor: pointer; border-radius: 5px;">🔙 Volver al menú</button>`;
+  chatContent.appendChild(volverBtn);
+
+  // Scroll automático
+  chatContent.scrollTop = chatContent.scrollHeight;
+}
+
+function mostrarOpciones() {
+  const chatContent = document.getElementById('chat-content');
+
+  chatContent.innerHTML = `
+    <div class="message bot">👋 ¡Hola! ¿En qué puedo ayudarte?</div>
+    <div class="options">
+      <button onclick="selectOption('¿Cómo puedo registrarme?')">¿Cómo puedo registrarme?</button>
+      <button onclick="selectOption('¿Dónde están ubicados?')">¿Dónde están ubicados?</button>
+      <button onclick="selectOption('¿Qué métodos de pago aceptan?')">¿Qué métodos de pago aceptan?</button>
+      <button onclick="selectOption('¿Quieres ver los archivos?')">¿Quieres ver los archivos?</button>
+    </div>
+  `;
+}
+
+
+function getResponse(question) {
+  switch (question) {
+    case '¿Cómo puedo registrarme?':
+      return 'Puedes registrarte dando clic en el botón "Registrarse" arriba a la derecha.';
+    case '¿Dónde están ubicados?':
+      return 'Estamos ubicados en Lima, Perú 🇵🇪';
+    case '¿Qué métodos de pago aceptan?':
+      return 'Aceptamos Yape, Plin, tarjetas Visa y Mastercard.';
+      case '¿Quieres ver los archivos?':
+    return `
+      <p>Aquí tienes los archivos disponibles:</p>
+      <ul>
+        <li><a href="assets/DOCS/doc1.pdf" target="_blank" onclick="abrirPDF(event, 'assets/DOCS/doc1.pdf')">doc 1</a></li>
+        <li><a href="assets/DOCS/doc2.pdf" target="_blank" onclick="abrirPDF(event, 'assets/DOCS/doc2.pdf')">doc 2</a></li>
+        <li><a href="assets/DOCS/doc3.pdf" target="_blank" onclick="abrirPDF(event, 'assets/DOCS/doc3.pdf')">doc 3</a></li>
+        <li><a href="assets/DOCS/doc4.pdf" target="_blank" onclick="abrirPDF(event, 'assets/DOCS/doc4.pdf')">doc 4</a></li>
+        <li><a href="assets/DOCS/doc5.pdf" target="_blank" onclick="abrirPDF(event, 'assets/DOCS/doc5.pdf')">doc 5</a></li>
+        <li><a href="assets/DOCS/doc6.pdf" target="_blank" onclick="abrirPDF(event, 'assets/DOCS/doc6.pdf')">doc 6</a></li>
+        <li><a href="assets/DOCS/doc7.pdf" target="_blank" onclick="abrirPDF(event, 'assets/DOCS/doc7.pdf')">doc 7</a></li>
+        <li><a href="assets/DOCS/doc8.pdf" target="_blank" onclick="abrirPDF(event, 'assets/DOCS/doc8.pdf')">doc 8</a></li>
+        <li><a href="assets/DOCS/doc9.pdf" target="_blank" onclick="abrirPDF(event, 'assets/DOCS/doc9.pdf')">doc 9</a></li>
+        <li><a href="assets/DOCS/doc10.pdf" target="_blank" onclick="abrirPDF(event, 'assets/DOCS/doc10.pdf')">doc 10</a></li>
+        <li><a href="assets/DOCS/doc11.pdf" target="_blank" onclick="abrirPDF(event, 'assets/DOCS/doc11.pdf')">doc 11</a></li>
+      </ul>
+    `;
+    default:
+      return 'Lo siento, no entendí tu pregunta.';
+  }
+}
+</script>
+
+<!-- POP-UP PDF -->
+<div id="pdf-modal" class="hidden" style="position: fixed; top: 10%; left: 10%; width: 80%; height: 80%; background: white; border: 2px solid #333; z-index: 1000; flex-direction: column;">
+  <button onclick="cerrarPDF()" style="align-self: flex-end; margin: 5px; background: #ebfa16; border: none; padding: 5px 10px; cursor: pointer;">Cerrar</button>
+  <iframe id="pdf-frame" style="flex-grow: 1; width: 100%; border: none;"></iframe>
+</div>
+
+<script>
+  function abrirPDF(event, url) {
+  event.preventDefault();
+  const modal = document.getElementById('pdf-modal');
+  const frame = document.getElementById('pdf-frame');
+
+  frame.src = url;
+  modal.classList.remove('hidden');
+  modal.style.display = 'flex'; // 👈 ACTIVAR FLEX SOLO AL ABRIR
+}
+
+
+  function cerrarPDF() {
+  const modal = document.getElementById('pdf-modal');
+  modal.classList.add('hidden');
+  modal.style.display = 'none'; // 👈 OCULTAR COMPLETAMENTE
+  document.getElementById('pdf-frame').src = '';
+}
+
+</script>
+
+
+<script>
+let indexImagenes = 0;
+
+function moveImagenes(direction) {
+  const track = document.getElementById('carouselImagenes');
+  const items = track.querySelectorAll('div');
+  const totalItems = items.length;
+  const visibleItems = 2;
+
+  indexImagenes += direction;
+
+  if (indexImagenes < 0) indexImagenes = 0;
+  if (indexImagenes > totalItems - visibleItems) {
+    indexImagenes = totalItems - visibleItems;
+  }
+
+  const itemWidth = items[0].offsetWidth + 20; // ancho + gap
+  const offset = itemWidth * indexImagenes;
+  track.style.transform = `translateX(-${offset}px)`;
+
+  document.getElementById('prevBtnImagenes').style.display = indexImagenes > 0 ? 'block' : 'none';
+  document.getElementById('nextBtnImagenes').style.display = indexImagenes < totalItems - visibleItems ? 'block' : 'none';
+}
+
+// Mostrar flechas iniciales correctamente
+window.addEventListener('load', () => {
+  moveImagenes(0);
+});
+</script>
+
+<script>
+  let posSinfiltro = 0;
+
+  function moverCarruselSinfiltro(dir) {
+    const track = document.getElementById('carouselSinfiltro');
+    const items = track.querySelectorAll('.sinfiltro-slide');
+    const maxItems = items.length;
+    const visibleItems = window.innerWidth < 768 ? 1 : 2;
+    const maxPos = maxItems - visibleItems;
+
+    posSinfiltro += dir;
+    if (posSinfiltro < 0) posSinfiltro = 0;
+    if (posSinfiltro > maxPos) posSinfiltro = maxPos;
+
+    const itemWidth = items[0].offsetWidth + 30;
+    track.style.transform = `translateX(-${posSinfiltro * itemWidth}px)`;
+  }
+</script>
+
+
+</body>
+</html>
